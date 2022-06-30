@@ -1,3 +1,8 @@
+import 'dart:convert';
+
+List<WordResonse> wordResonseFromJson(String str) => List<WordResonse>.from(json.decode(str).map((x) => WordResonse.fromJson(x)));
+
+String wordResonseToJson(List<WordResonse> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
 class WordResonse {
     WordResonse({

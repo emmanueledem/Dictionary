@@ -11,7 +11,7 @@ class HttpService {
       response = await http.get(url);
     } catch (e) {
       print(e);
-      throw e;
+      rethrow;
     }
 
     return response;
